@@ -46,7 +46,7 @@ router.route('/')
 
 var insertDocument = function(db,data, callback) {
     console.log("-",typeof data,"-");
-    console.log("-",typeof data.data,"-");
+    //console.log("-",typeof data.data,"-");
     //var dat= JSON.parse(JSON.stringify(data.data));
     var dat= JSON.parse(data.data);
     console.log("-",typeof dat,"-");
