@@ -36,8 +36,8 @@ router.route('/')
         console.log(req.body);
         MongoClient.connect(url, function(err, db) {
             assert.equal(null, err);
-            var data= JSON.parse(JSON.stringify(req.body.data));
-            insertDocument(db,data, function() {
+            var data= JSON.parse(JSON.stringify(req.body));
+            insertDocument(db,data.data, function() {
                 db.close();
             });
         });
