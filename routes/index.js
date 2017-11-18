@@ -33,7 +33,7 @@ router.route('/')
     })
     .post(function(req, res, next) {
         console.log("index !!!!!welcome again2!");
-        console.log(req);
+        console.log(req.body);
         MongoClient.connect(url, function(err, db) {
             assert.equal(null, err);
             var data= req.body.data;
@@ -46,8 +46,8 @@ router.route('/')
 
 
 var insertDocument = function(db,data, callback) {
-    console.log("data",JSON.parse(data));
-    console.log("data",data,data.boiler,data.t1);
+    console.log("data");
+    console.log("data",data,data['boiler'],data.t1);
     db.collection('temp').insertOne( {
     boiler:data.boiler,
         t0:data.t0,
