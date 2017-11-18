@@ -28,6 +28,9 @@ router.route('/')
         });
         res.send(200);
     })
+    .get(function(req, res, next){
+        res.send("TEST OK");
+    }
 
 var insertDocument = function(db,data, callback) {
     db.collection('temp').insertOne( {
