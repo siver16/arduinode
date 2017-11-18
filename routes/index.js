@@ -53,7 +53,9 @@ var insertDocument = function(db,data, callback) {
     console.log("-",typeof dat,"-");
     console.log("-",dat,"-");
     //dat.data =  dat.data.replace(new RegExp(',', 'g'),', ');
-    dat.data =  dat.data.replace(new RegExp('.50', 'g'),'');
+    dat.data =  dat.data.replace(new RegExp('{', 'g'),'{"');
+    dat.data =  dat.data.replace(new RegExp(':', 'g'),'":');
+    dat.data =  dat.data.replace(new RegExp(',', 'g'),',"');
     console.log("-",dat.data,"-");
     console.log("-",dat.data.boiler,"-");
     console.log("-",JSON.parse(JSON.stringify(dat.data)).boiler,"-");
