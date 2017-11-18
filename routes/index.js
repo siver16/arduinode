@@ -52,7 +52,7 @@ var insertDocument = function(db,data, callback) {
     //var dat= JSON.parse(data);
     console.log("-",typeof dat,"-");
     console.log("-",dat,"-");
-    console.log("-",dat.data,"-");
+    console.log("-",dat.data.boiler,"-");
     //console.log("-",JSON.parse(JSON.stringify(dat.data)).boiler,"-");
     //console.log("-",typeof JSON.parse(JSON.stringify(dat.data)),"-");
     db.collection('temp').insertOne( {
