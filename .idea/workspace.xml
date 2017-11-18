@@ -49,8 +49,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="38" column="43" lean-forward="false" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+            <state relative-caret-position="517">
+              <caret line="52" column="19" lean-forward="true" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -514,7 +514,7 @@
       <workItem from="1468688913094" duration="28888000" />
       <workItem from="1508052895843" duration="6353000" />
       <workItem from="1511008957486" duration="78000" />
-      <workItem from="1511009056224" duration="6056000" />
+      <workItem from="1511009056224" duration="6192000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1468280936380</created>
@@ -614,11 +614,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511017003938</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="test3">
+      <created>1511017092329</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1511017092329</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="209458000" />
+    <option name="totallyTimeSpent" value="209594000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="24" width="1623" height="1026" extended-state="6" />
@@ -969,8 +976,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="38" column="43" lean-forward="false" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+        <state relative-caret-position="517">
+          <caret line="52" column="19" lean-forward="true" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
           <folding />
         </state>
       </provider>
