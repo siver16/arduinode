@@ -30,7 +30,7 @@ router.route('/')
     })
     .get(function(req, res, next){
         res.send("TEST OK");
-    }
+    })
 
 var insertDocument = function(db,data, callback) {
     db.collection('temp').insertOne( {
