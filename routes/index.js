@@ -17,12 +17,12 @@ var assert = require('assert');
 
 router.route('/')
     .post(function(req, res, next) {
-        console.log("index !!!!!welcome again!");
+        console.log("index !!!!!welcome again2!");
         console.log(req.body);
         MongoClient.connect(url, function(err, db) {
             assert.equal(null, err);
-            //insertDocument(db,req.body, function() {
-            insertDocument(db,{boiler:1,t0:23,h0:34,t1:3.00,t2:10.50,t3:23.50}, function() {
+            insertDocument(db,req.body, function() {
+            //insertDocument(db,{boiler:1,t0:23,h0:34,t1:3.00,t2:10.50,t3:23.50}, function() {
                 db.close();
             });
         });
