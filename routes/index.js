@@ -51,6 +51,8 @@ var insertDocument = function(db,data, callback) {
     var dat= JSON.parse(data);
     console.log("-",typeof dat,"-");
     console.log("-",dat.data,"-");
+    console.log("-",dat.data.boiler,"-");
+
     db.collection('temp').insertOne( {
     boiler:data.boiler,
         t0:data.t0,
