@@ -56,7 +56,7 @@ var insertDocument = function(db,data, callback) {
     dat.data =  dat.data.replace(new RegExp('.50', 'g'),'');
     console.log("-",dat.data,"-");
     console.log("-",dat.data.boiler,"-");
-    //console.log("-",JSON.parse(JSON.stringify(dat.data)).boiler,"-");
+    console.log("-",JSON.parse(JSON.stringify(dat.data)).boiler,"-");
     //console.log("-",typeof JSON.parse(JSON.stringify(dat.data)),"-");
     db.collection('temp').insertOne( {
     boiler:data.boiler,
