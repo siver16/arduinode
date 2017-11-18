@@ -48,18 +48,18 @@ var insertDocument = function(db,data, callback) {
     console.log("-",typeof data,"-");
     //console.log("-",typeof data.data,"-");
     //var dat= JSON.parse(JSON.stringify(data.data));
-    var dat= data;
+    var dat= JSON.parse(data.data);
     //var dat= JSON.parse(data);
     console.log("-",typeof dat,"-");
     console.log("-",dat,"-");
     //dat.data =  dat.data.replace(new RegExp(',', 'g'),', ');
-    dat.data =  dat.data.replace(new RegExp('{', 'g'),'{"');
-    dat.data =  dat.data.replace(new RegExp(':', 'g'),'":');
-    dat.data =  dat.data.replace(new RegExp(',', 'g'),',"');
-    console.log("-",dat.data,"-");
-    console.log("-",dat.data.boiler,"-");
-    console.log("-",JSON.parse(JSON.stringify(dat.data)).boiler,"-");
-    console.log("-",JSON.parse(dat.data).boiler,"-");
+    dat =  dat.replace(new RegExp('{', 'g'),'{"');
+    dat =  dat.replace(new RegExp(':', 'g'),'":');
+    dat =  dat.replace(new RegExp(',', 'g'),',"');
+    console.log("-",dat,"-");
+    console.log("-",dat.boiler,"-",dat.h0);
+    //console.log("-",JSON.parse(JSON.stringify(dat.data)).boiler,"-");
+    //console.log("-",JSON.parse(dat.data).boiler,"-");
     //console.log("-",typeof JSON.parse(JSON.stringify(dat.data)),"-");
     db.collection('temp').insertOne( {
     boiler:data.boiler,
