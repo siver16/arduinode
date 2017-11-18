@@ -16,21 +16,33 @@ var assert = require('assert');
 // });
 
 router.route('/')
+    .get(function(req, res, next){
+        MongoClient.connect(url, function(err, db) {
+            assert.equal(null, err);
+            findLast(db, function(data) {
+                console.log(data);
+
+                if(data==null){
+                    db.close();
+                }else{
+                    res.send(data);
+                }
+
+            });
+        });
+    })
     .post(function(req, res, next) {
         console.log("index !!!!!welcome again2!");
         console.log(req.body);
         MongoClient.connect(url, function(err, db) {
             assert.equal(null, err);
             insertDocument(db,req.body, function() {
-            //insertDocument(db,{boiler:1,t0:23,h0:34,t1:3.00,t2:10.50,t3:23.50}, function() {
                 db.close();
             });
         });
         res.send(200);
     })
-    .get(function(req, res, next){
-        res.send("TEST OK");
-    })
+
 
 var insertDocument = function(db,data, callback) {
     db.collection('temp').insertOne( {
@@ -45,6 +57,18 @@ var insertDocument = function(db,data, callback) {
         assert.equal(err, null);
         console.log("Inserted a document into the temp collection.");
         callback();
+    });
+};
+
+var findLast = function(db, callback) {
+    var cursor =db.collection('temp').find().sort( { "_id": -1} ).limit(1);
+    cursor.each(function(err, doc) {
+        assert.equal(err, null);
+        if (doc != null) {
+            callback(doc);
+        } else {
+            callback(null);
+        }
     });
 };
 
