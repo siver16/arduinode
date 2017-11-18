@@ -36,7 +36,7 @@ router.route('/')
         console.log(req.body);
         MongoClient.connect(url, function(err, db) {
             assert.equal(null, err);
-            insertDocument(db,req.body, function() {
+            insertDocument(db,JSON.parse(JSON.stringify(req.body)), function() {
                 db.close();
             });
         });
@@ -51,10 +51,10 @@ var insertDocument = function(db,data, callback) {
     var dat= data;
     //var dat= JSON.parse(data);
     console.log("-",typeof dat,"-");
+    console.log("-",dat,"-");
     console.log("-",dat.data,"-");
-    console.log("-",dat.data[0],"-");
-    console.log("-",JSON.parse(JSON.stringify(dat.data.trim())).boiler,"-");
-    console.log("-",typeof JSON.parse(JSON.stringify(dat.data)),"-");
+    //console.log("-",JSON.parse(JSON.stringify(dat.data)).boiler,"-");
+    //console.log("-",typeof JSON.parse(JSON.stringify(dat.data)),"-");
     db.collection('temp').insertOne( {
     boiler:data.boiler,
         t0:data.t0,
