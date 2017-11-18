@@ -87,10 +87,6 @@ app.use(function(err, req, res, next) {
   });
 });
 
-console.log("+++");
-console.log(JSON.parse(JSON.stringify({boiler:0,t0:23,h0:34,t1:3.50,t2:10.50,t3:23.50})));
-console.log(JSON.parse(JSON.stringify({boiler:0,t0:23,h0:34,t1:3.50,t2:10.50,t3:23.50})).boiler);
-console.log("+++");
 
 
 module.exports = app;

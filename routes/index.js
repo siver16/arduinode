@@ -48,14 +48,15 @@ var insertDocument = function(db,data, callback) {
     console.log("-",typeof data,"-");
     //console.log("-",typeof data.data,"-");
     //var dat= JSON.parse(JSON.stringify(data.data));
-    var dat= JSON.parse(data.data);
+
     //var dat= JSON.parse(data);
-    console.log("-",typeof dat,"-");
-    console.log("-",dat,"-");
+    //console.log("-",typeof dat,"-");
+    //console.log("-",dat,"-");
     //dat.data =  dat.data.replace(new RegExp(',', 'g'),', ');
-    dat =  dat.replace(new RegExp('{', 'g'),'{"');
-    dat =  dat.replace(new RegExp(':', 'g'),'":');
-    dat =  dat.replace(new RegExp(',', 'g'),',"');
+    data.data =  data.data.replace(new RegExp('{', 'g'),'{"');
+    data.data =  data.data.replace(new RegExp(':', 'g'),'":');
+    data.data =  data.data.replace(new RegExp(',', 'g'),',"');
+    var dat= JSON.parse(data.data);
     console.log("-",dat,"-");
     console.log("-",dat.boiler,"-",dat.h0);
     //console.log("-",JSON.parse(JSON.stringify(dat.data)).boiler,"-");
