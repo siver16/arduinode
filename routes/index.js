@@ -45,6 +45,7 @@ router.route('/')
 
 
 var insertDocument = function(db,data, callback) {
+    console.log("data",data);
     db.collection('temp').insertOne( {
     boiler:data.boiler,
         t0:data.t0,
