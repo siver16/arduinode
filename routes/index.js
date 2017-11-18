@@ -33,7 +33,7 @@ router.route('/')
     })
     .post(function(req, res, next) {
         console.log("index !!!!!welcome again2!");
-        console.log(req.body);
+        console.log(req);
         MongoClient.connect(url, function(err, db) {
             assert.equal(null, err);
             var data= req.body.data;
