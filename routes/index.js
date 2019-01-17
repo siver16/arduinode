@@ -25,7 +25,7 @@ router.route('/')
                 if(data==null){
                     db.close();
                 }else{
-                    res.send(data+"^^^");
+                    res.send(data);
                 }
 
             });
