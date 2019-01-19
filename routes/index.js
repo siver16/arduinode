@@ -57,7 +57,7 @@ var insertDocument = function(db,data, callback) {
     //data.data =  data.data.replace(new RegExp(':', 'g'),'":');
     //data.data =  data.data.replace(new RegExp(',', 'g'),',"');
     var dat= JSON.parse(data.data);
-    console.log("-",dat,"------------------------------------++++++++-------******0011");
+    console.log("-",dat,"------------------------------------++++++++-------******0011222");
     //console.log("-",dat.boiler,"-",dat.h0);
     //console.log("-",JSON.parse(JSON.stringify(dat.data)).boiler,"-");
     //console.log("-",JSON.parse(dat.data).boiler,"-");
